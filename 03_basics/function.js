@@ -20,3 +20,11 @@ function handleobject(anyobject){
 
 }
 handleobject(user);
+
+// arrow function 
+
+((name)=>{
+
+    console.log(`DB Conected ${name} `);
+})('mahesh')
+
