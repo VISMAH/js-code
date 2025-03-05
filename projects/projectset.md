@@ -218,3 +218,60 @@ function newGame(guess){
 
 
 ```
+
+##project 5
+
+```javascript
+const insert = document.getElementById('insert');
+
+window.addEventListener('keydown',(e)=>{
+  insert.innerHTML=`
+  <div class='color'>
+  <table>
+  <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table
+</div>  `;
+}
+);
+```
+
+
+##project 6 
+
+
+```javascript
+// generate color 
+const randomColor= function(){
+  const hex ='0123456789ABCDEF';
+  let color= '#';
+
+  for(let i=0;i<6;i++){
+    color +=hex[Math.floor(Math.random()*16)];
+
+  }
+  return color;
+
+
+
+};
+
+const changingcolor =function(){
+   document.body.style.background =randomColor;
+};
+
+const stopchangingcolor =function(){
+
+};
+
+document.querySelector('#start').addEventListener('click',changingcolor);
+document.querySelector('#stop').addEventListener('click',stopchangingcolor);```
